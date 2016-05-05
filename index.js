@@ -28,6 +28,12 @@ function execute(argv, env) {
 
     config.load(env.configPath);
     taskPlugin = plugin.loadTaskPlugin(argv.task || config.get('task'));
+    if (argv.glob && argv.glob.length > 0) {
+        config.set('include', [{
+            glob: argv.glob
+        }]);
+    }
+
     gulp.task('config', function (cb) {
         var include;
 

@@ -32,6 +32,11 @@ argvOptions = {
     sphinxconf: {
         type: 'string',
         describe: chalk.gray('Manually set path of sphinxconf')
+    },
+    g: {
+        alias: 'glob',
+        type: 'array',
+        describe: chalk.gray('fiter release file')
     }
 };
 commander = {

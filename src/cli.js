@@ -5,7 +5,7 @@ var command = require('./command.js');
 
 module.exports = yargs
     .options({
-        V: {
+        v: {
             alias: 'version',
             demand: false,
             describe: chalk.gray('output the version number')
